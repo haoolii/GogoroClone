@@ -2,4 +2,4 @@
 
 ## preview
 
-![](demo.gif)
+<img src="./demo.gif)" width="200">
