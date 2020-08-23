@@ -2,4 +2,4 @@
 
 ## preview
 
-![demo.gif]('demo.gif')
+![](demo.gif)
