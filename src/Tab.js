@@ -26,7 +26,7 @@ export default class Tab extends Component {
           <NavLink to="/temperature">溫度</NavLink>
         </li>
         <li className="tab__item">
-          <NavLink to="/control">操控</NavLink>
+          <NavLink to="/operation">操控</NavLink>
         </li>
       </ul>
     );
