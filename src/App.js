@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Router, Link } from '@reach/router';
-import Power from './Power';
-import Performance from './Performance';
+import Power from './Power/Power';
+import Performance from './Performance/Performance';
+import Operation from './Operation/Opertaion';
+import Temperature from './Temperature/Temperature';
 import Tab from './Tab';
 export default class App extends Component {
   render() {
@@ -17,6 +19,8 @@ export default class App extends Component {
             <Router className="gogoro__router">
               <Power path="/power"></Power>
               <Performance path="/performance"></Performance>
+              <Operation path="/operation"></Operation>
+              <Temperature path="/temperature"></Temperature>
             </Router>
           </div>
         </div>
