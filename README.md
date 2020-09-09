@@ -11,3 +11,4 @@
 - D3
 - Parcel
 - Reach-router
+- Styled-Components
