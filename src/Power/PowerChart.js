@@ -22,7 +22,7 @@ export default function PowerChart({ datas, width, height }) {
     const _areaLayer = _rootLayer.append('g');
     setSvg(_svg);
     setRootLayer(_rootLayer);
-    setLineLayer(_lineLayer);
+    // setLineLayer(_lineLayer);
     setareaLayer(_areaLayer);
     renderLinearColor({ svg: _svg });
   };
@@ -61,13 +61,13 @@ export default function PowerChart({ datas, width, height }) {
     linearAreaGradient
       .append('stop')
       .attr('offset', '0%')
-      .attr('stop-opacity', '0.5')
+      .attr('stop-opacity', '1')
       .attr('stop-color', '#11325e');
     linearAreaGradient
       .append('stop')
       .attr('offset', '50%')
       .attr('stop-color', '#11325e')
-      .attr('stop-opacity', '0.2');
+      .attr('stop-opacity', '0.4');
     linearAreaGradient
       .append('stop')
       .attr('offset', '100%')
@@ -88,17 +88,17 @@ export default function PowerChart({ datas, width, height }) {
       .y((d) => yScale(d.value))
       .curve(d3.curveNatural);
 
-    let paths = lineLayer.selectAll('path').data([datas]);
-    paths
-      .enter()
-      .append('path')
-      .attr('d', line)
-      .attr('fill', 'none')
-      .attr('stroke', 'url(#lineColor)')
-      .attr('stroke-width', 5);
+    // let paths = lineLayer.selectAll('path').data([datas]);
+    // paths
+    //   .enter()
+    //   .append('path')
+    //   .attr('d', line)
+    //   .attr('fill', 'none')
+    //   .attr('stroke', 'url(#lineColor)')
+    //   .attr('stroke-width', 5);
 
-    paths.transition().duration(1000).attr('d', line);
-    paths.exit().remove();
+    // paths.transition().duration(1000).attr('d', line);
+    // paths.exit().remove();
 
     let area = d3
       .area()
